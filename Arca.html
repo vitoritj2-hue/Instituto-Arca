@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Instituto ARCA — Academia Redentiva de Consciência e Alinhamento</title>
+<meta name="description" content="Instituto ARCA: Academia Redentiva de Consciência e Alinhamento.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:dark;
+  --black:#000;
+  --ink:#0a0907;
+  --gold:#c9a24b;
+  --gold-hi:#f0d58a;
+  --gold-lo:#8a6a2b;
+  --text:#e9e3d3;
+  --muted:#a89f89;
+  --display:"Cinzel","Trajan Pro","Times New Roman",serif;
+  --body:"Jost","Helvetica Neue",Arial,sans-serif;
+  --gold-grad:linear-gradient(180deg,var(--gold-hi) 0%,var(--gold) 55%,var(--gold-lo) 100%);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px;background:var(--black)}
+body{margin:0;background:var(--black);color:var(--text);font-family:var(--body);font-weight:300;font-size:18px;line-height:1.7;padding-bottom:env(safe-area-inset-bottom,0px)}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--gold-hi);outline-offset:4px}
+.wrap{width:min(1080px,100% - 48px);margin-inline:auto}
+.gold-text{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* Navegação */
+header{position:sticky;top:0;z-index:10;background:rgba(0,0,0,.88);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,162,75,.18);padding-top:env(safe-area-inset-top,0px)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:64px;flex-wrap:wrap}
+.brand{font-family:var(--display);font-size:1.15rem;letter-spacing:.28em}
+nav{display:flex;gap:28px;font-size:.95rem}
+nav a{color:var(--muted);transition:color .2s}
+nav a:hover{color:var(--gold-hi)}
+
+/* Hero */
+.hero{min-height:calc(100svh - 64px);display:grid;place-items:center;text-align:center;padding:72px 0 96px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;left:50%;top:38%;width:min(900px,120vw);aspect-ratio:1;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(201,162,75,.16),transparent 70%);pointer-events:none}
+.hero-inner{position:relative}
+.arc{width:min(420px,78vw);height:auto;display:block;margin:0 auto 8px;overflow:visible}
+.arc path{fill:none;stroke:url(#g);stroke-width:2;stroke-linecap:round;stroke-dasharray:520;stroke-dashoffset:520;animation:draw 2.2s .2s ease-out forwards}
+.star{transform-origin:210px 22px;opacity:0;animation:glint 1.6s 1.7s ease-out forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes glint{0%{opacity:0;transform:scale(.2)}55%{opacity:1;transform:scale(1.5)}100%{opacity:1;transform:scale(1)}}
+.inst{font-family:var(--display);letter-spacing:.5em;font-size:clamp(.85rem,2.4vw,1.15rem);margin:0 0 0 .5em;display:flex;align-items:center;justify-content:center;gap:18px}
+.inst::before,.inst::after{content:"";height:1px;width:clamp(28px,8vw,88px);background:var(--gold-lo)}
+h1{font-family:var(--display);font-weight:500;font-size:clamp(5rem,20vw,11rem);line-height:1;margin:.05em 0 .1em;letter-spacing:.04em}
+.tag{font-family:var(--display);letter-spacing:.22em;font-size:clamp(.7rem,1.8vw,.9rem);color:var(--gold);margin:0 0 40px}
+.lead{max-width:34em;margin:0 auto 44px;color:var(--text);font-size:1.15rem}
+.btn{display:inline-block;padding:14px 36px;border:1px solid var(--gold);color:var(--gold-hi);font-family:var(--display);letter-spacing:.18em;font-size:.85rem;transition:background .25s,color .25s}
+.btn:hover{background:var(--gold);color:var(--black)}
+
+/* Seções */
+section{padding:112px 0}
+h2{font-family:var(--display);font-weight:500;font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:.06em;line-height:1.25;margin:0 0 28px}
+.rule{display:block;width:72px;height:1px;background:var(--gold);margin:0 0 32px}
+.sobre .wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:72px;align-items:start}
+.sobre p{margin:0 0 1.2em;color:var(--text);max-width:36em}
+.sobre p.muted{color:var(--muted)}
+
+.pilares{background:var(--ink);border-block:1px solid rgba(201,162,75,.16)}
+.pilares h2{text-align:center}
+.pilares .rule{margin-inline:auto}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);margin-top:56px}
+.col{padding:8px 40px;text-align:center}
+.col+.col{border-left:1px solid rgba(201,162,75,.28)}
+.col h3{font-family:var(--display);font-weight:500;font-size:1.35rem;letter-spacing:.14em;margin:0 0 16px}
+.col p{margin:0;color:var(--muted);font-size:1rem}
+
+.atuacao .wrap{max-width:820px}
+.lista{list-style:none;margin:40px 0 0;padding:0}
+.lista li{display:grid;grid-template-columns:minmax(0,15em) 1fr;gap:32px;padding:26px 0;border-top:1px solid rgba(201,162,75,.2)}
+.lista li:last-child{border-bottom:1px solid rgba(201,162,75,.2)}
+.lista strong{font-family:var(--display);font-weight:500;letter-spacing:.08em;font-size:1.1rem;color:var(--gold-hi)}
+.lista span{color:var(--muted);font-size:1rem}
+
+.manifesto{text-align:center;padding:128px 0}
+.manifesto blockquote{margin:0 auto;max-width:22em;font-family:var(--display);font-weight:400;font-size:clamp(1.5rem,3.6vw,2.3rem);line-height:1.5;letter-spacing:.03em}
+
+.contato{background:var(--ink);border-top:1px solid rgba(201,162,75,.16);text-align:center}
+.contato p{max-width:30em;margin:0 auto 36px;color:var(--muted)}
+.contato .dados{margin-top:40px;color:var(--text);font-size:1rem}
+.contato .dados a:hover{color:var(--gold-hi)}
+
+footer{padding:36px 0 calc(36px + env(safe-area-inset-bottom,0px));text-align:center;color:var(--muted);font-size:.85rem;border-top:1px solid rgba(201,162,75,.16)}
+footer .brand{display:block;color:var(--gold);margin-bottom:6px;font-size:1rem}
+
+@media (max-width:820px){
+  body{font-size:17px}
+  section{padding:80px 0}
+  .sobre .wrap{grid-template-columns:1fr;gap:12px}
+  .cols{grid-template-columns:1fr;gap:40px}
+  .col{padding:0 8px}
+  .col+.col{border-left:0;border-top:1px solid rgba(201,162,75,.28);padding-top:40px}
+  .lista li{grid-template-columns:1fr;gap:6px}
+  nav{gap:18px;font-size:.88rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .arc path{animation:none;stroke-dashoffset:0}
+  .star{animation:none;opacity:1}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand gold-text" href="#inicio">ARCA</a>
+    <nav aria-label="Principal">
+      <a href="#sobre">Sobre</a>
+      <a href="#pilares">Pilares</a>
+      <a href="#atuacao">Atuação</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero" id="inicio">
+    <div class="wrap hero-inner">
+      <svg class="arc" viewBox="0 0 420 60" aria-hidden="true">
+        <defs>
+          <linearGradient id="g" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#8a6a2b" stop-opacity="0"/>
+            <stop offset=".5" stop-color="#f0d58a"/>
+            <stop offset="1" stop-color="#8a6a2b" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <path d="M10 56 Q210 -22 410 56"/>
+        <g class="star">
+          <path d="M210 8 L213 19 L224 22 L213 25 L210 36 L207 25 L196 22 L207 19 Z" fill="#f0d58a"/>
+        </g>
+      </svg>
+      <p class="inst gold-text">INSTITUTO</p>
+      <h1 class="gold-text">ARCA</h1>
+      <p class="tag">ACADEMIA REDENTIVA DE CONSCIÊNCIA E ALINHAMENTO</p>
+      <p class="lead">Um espaço de formação e transformação interior, onde a consciência encontra direção.</p>
+      <a class="btn" href="#sobre">CONHEÇA O INSTITUTO</a>
+    </div>
+  </div>
+
+  <section class="sobre" id="sobre">
+    <div class="wrap">
+      <div>
+        <h2 class="gold-text">Sobre o Instituto</h2>
+        <span class="rule"></span>
+      </div>
+      <div>
+        <p> nao sei oq escrever :P</p>
+        <p class="muted">aqui vai ser a historia do instituto quem criou e tals</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pilares" id="pilares">
+    <div class="wrap">
+      <h2 class="gold-text">Nossos Princípios</h2>
+      <span class="rule"></span>
+      <div class="cols">
+        <div class="col">
+          <h3 class="gold-text">Consciência</h3>
+          <p>Ver com clareza quem somos, o que sentimos e o que nos move.</p>
+        </div>
+        <div class="col">
+          <h3 class="gold-text">Redenção</h3>
+          <p>Reconciliar-se com a própria história e recomeçar com sentido.</p>
+        </div>
+        <div class="col">
+          <h3 class="gold-text">Alinhamento</h3>
+          <p>Fazer pensamentos, escolhas e atitudes caminharem na mesma direção.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="atuacao" id="atuacao">
+    <div class="wrap">
+      <h2 class="gold-text">Como atuamos</h2>
+      <span class="rule"></span>
+      <ul class="lista">
+        <li><strong>Cursos e formações</strong><span>Descreva aqui os programas de estudo oferecidos pelo instituto.</span></li>
+        <li><strong>Encontros e vivências</strong><span>Descreva aqui os encontros presenciais ou online.</span></li>
+        <li><strong>Acompanhamento</strong><span>Descreva aqui o suporte individual ou em grupo.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="manifesto" aria-label="Manifesto">
+    <div class="wrap">
+      <blockquote class="gold-text">“Toda travessia começa com o alinhamento de quem decide embarcar.”</blockquote>
+    </div>
+  </section>
+
+  <section class="contato" id="contato">
+    <div class="wrap">
+      <h2 class="gold-text">Fale com o Instituto</h2>
+      <span class="rule" style="margin-inline:auto"></span>
+      <p>Quer saber mais sobre os próximos encontros? Entre em contato.</p>
+      <a class="btn" href="mailto:contato@seudominio.com.br">ENVIAR MENSAGEM</a>
+      <div class="dados">
+        <a href="mailto:contato@seudominio.com.br">contato@seudominio.com.br</a><br>
+        <a href="tel:+5500000000000">(00) 00000-0000</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="brand gold-text">INSTITUTO ARCA</span>
+    Academia Redentiva de Consciência e Alinhamento<br>
+    © 2026 Instituto ARCA. Todos os direitos reservados.
+  </div>
+</footer>
+
+</body>
+</html>
