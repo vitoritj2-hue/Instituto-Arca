@@ -303,6 +303,21 @@ footer { border-top: 1px solid var(--line-soft); padding-block: 56px 40px; }
   @keyframes sheen { 0%, 55% { background-position: 0 0, 160% 0; } 100% { background-position: 0 0, -60% 0; } }
 }
 @media (prefers-reduced-motion: reduce) { .star { animation: none; } html { scroll-behavior: auto; } }
+
+/* formação terapeuta cristão */
+.formacao .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-soft);border:1px solid var(--line-soft);margin:0 auto 56px;max-width:900px}
+.formacao .stat{background:var(--surface);padding:28px 12px;text-align:center}
+.formacao .stat b{display:block;font-family:var(--font-display);font-weight:600;font-size:clamp(1.8rem,5vw,2.8rem);line-height:1.1}
+.formacao .stat span{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.offer{max-width:560px;margin:0 auto;border:1px solid var(--line);background:linear-gradient(135deg,var(--surface-2),var(--surface));padding:clamp(28px,5vw,48px);text-align:center;display:flex;flex-direction:column;align-items:center;gap:18px}
+.offer .badge{font-family:var(--font-display);font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);border:1px solid var(--line);padding:6px 14px}
+.offer h3{font-size:1.35rem}
+.offer .price{font-family:var(--font-display);font-size:clamp(1.8rem,5vw,2.5rem);font-weight:600}
+.offer .cash{font-family:var(--font-serif);font-style:italic;font-size:1.25rem;color:var(--text);margin-top:-10px}
+.offer ul{list-style:none;margin:6px 0 10px;padding:0;display:flex;flex-direction:column;gap:10px;color:var(--muted);text-align:left}
+.offer li::before{content:"";display:inline-block;width:6px;height:6px;transform:rotate(45deg);background:var(--gold);margin-right:12px;vertical-align:middle}
+.offer small{color:var(--muted);font-size:.8rem;line-height:1.5}
+@media (max-width:640px){.formacao .stats{grid-template-columns:repeat(2,1fr)}}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -325,6 +340,7 @@ footer { border-top: 1px solid var(--line-soft); padding-block: 56px 40px; }
     </a>
     <nav class="main" aria-label="Principal">
       <a href="#programas">Módulos</a>
+      <a href="#formacao">Terapeuta Cristão</a>
       <a href="#fundadores">Fundadores</a>
       <a href="#guias">Mentores</a>
       <a href="#duvidas">Dúvidas</a>
@@ -442,6 +458,34 @@ footer { border-top: 1px solid var(--line-soft); padding-block: 56px 40px; }
         <p>Um conteúdo para quem quer sair do ciclo de esforço sem retorno.</p>
         <a class="more" href="https://app.appsell.ai/edasar/login" target="_blank" rel="noopener">Acessar na Área do aluno</a>
       </article>
+    </div>
+  </section>
+
+  <section id="formacao" class="formacao">
+    <div class="sec-head">
+      <div class="eyebrow">Formação Profissional &amp; Ministerial</div>
+      <h2>Torne-se um <span class="gold-text">terapeuta cristão</span> preparado para transformar vidas</h2>
+      <p>Uma formação que une princípios bíblicos, conhecimento científico e prática supervisionada, para quem foi chamado a cuidar de pessoas com excelência e profundidade.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><b class="gold-text">220</b><span>Horas de formação</span></div>
+      <div class="stat"><b class="gold-text">MEC</b><span>Certificado reconhecido</span></div>
+      <div class="stat"><b class="gold-text">12</b><span>Módulos</span></div>
+      <div class="stat"><b class="gold-text">2</b><span>Anos de acesso</span></div>
+    </div>
+    <div class="offer">
+      <span class="badge">Turma Gênesis · Condição exclusiva</span>
+      <h3>Formação Terapeuta Cristão</h3>
+      <div class="price gold-text">12x R$ 154,82</div>
+      <div class="cash">no cartão, ou R$ 1.497,00 à vista</div>
+      <ul>
+        <li>220 horas de formação</li>
+        <li>Certificado reconhecido pelo MEC</li>
+        <li>2 anos de acesso à plataforma e à supervisão</li>
+        <li>Todos os bônus exclusivos inclusos</li>
+      </ul>
+      <a class="btn solid" href="https://sun.eduzz.com/8017612K07?cupom=GENESIS" target="_blank" rel="noopener">Garantir minha vaga</a>
+      <small>Condição válida exclusivamente para a Turma Gênesis, sujeita à disponibilidade de turma e supervisão.</small>
     </div>
   </section>
 
